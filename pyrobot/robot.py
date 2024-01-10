@@ -7,11 +7,17 @@ from datetime import datetime
 from datetime import time
 from datetime import timezone
 
+from typing import List
+from typing import Dict
+from typing import Union
+
+
 class PyRobot():
 
     
-    def __init__(self, client_id: str, redirect_uri: str, credentials_path: str = None, account_number: str = None) -> None:
+    def __init__(self, client_id: str, redirect_uri: str, credentials_path: str = None, trading_account: str = None, account_number: str = None) -> None:
 
+        self.trading_account: str = trading_account
         self.account_number: str = account_number
         self.client_id: str = client_id
         self.redirect_uri: str = redirect_uri
@@ -80,7 +86,7 @@ class PyRobot():
     def grab_current_quotes(self) -> dict:
         pass
 
-    def grab_historical_prices(self) -> list[dict]:
+    def grab_historical_prices(self) -> List[Dict]:
         pass
 
     def create_stock_frame(self):
