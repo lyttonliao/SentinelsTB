@@ -86,7 +86,7 @@ class PyRobot():
     def grab_current_quotes(self) -> dict:
         pass
 
-    def grab_historical_prices(self) -> List[Dict]:
+    def grab_historical_prices(self) -> List[dict]:
         pass
 
     def create_stock_frame(self):
