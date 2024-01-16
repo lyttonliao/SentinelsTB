@@ -15,7 +15,7 @@ class Portfolio():
         self.risk_tolerance = 0.0
         self.account_number = account_number
 
-    def add_position(self, symbol: str, asset_type: str, purchase_date: Optional[str], quantity: int = 0, purchase_price: float = 0.0) -> dict:
+    def add_position(self, symbol: str, asset_type: str, purchase_date: Optional[str], quantity: int = 0, purchase_price: float = 0.0) -> Dict:
         
         self.positions[symbol] = {}
         self.positions[symbol]['symbol'] = symbol
@@ -26,7 +26,7 @@ class Portfolio():
 
         return self.positions
 
-    def add_positions(self, positions: List[dict]) -> dict:
+    def add_positions(self, positions: List[Dict]) -> Dict:
 
         if isinstance(positions, list):
             for position in positions:
