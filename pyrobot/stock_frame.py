@@ -6,7 +6,6 @@ from datetime import datetime
 from datetime import timezone
 
 from typing import List
-from typing import dict
 from typing import Union
 
 from pandas.core.groupby import DataFrameGroupBy

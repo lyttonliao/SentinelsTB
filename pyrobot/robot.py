@@ -8,7 +8,6 @@ from datetime import time
 from datetime import timezone
 
 from typing import List
-from typing import dict
 from typing import Union
 
 
