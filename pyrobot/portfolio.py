@@ -1,5 +1,5 @@
 from typing import List
-from typing import Dict
+from typing import dict
 from typing import Union
 from typing import Tuple
 from typing import Optional
@@ -15,7 +15,7 @@ class Portfolio():
         self.risk_tolerance = 0.0
         self.account_number = account_number
 
-    def add_position(self, symbol: str, asset_type: str, purchase_date: Optional[str], quantity: int = 0, purchase_price: float = 0.0) -> Dict:
+    def add_position(self, symbol: str, asset_type: str, purchase_date: Optional[str], quantity: int = 0, purchase_price: float = 0.0) -> dict:
         
         self.positions[symbol] = {}
         self.positions[symbol]['symbol'] = symbol
@@ -26,7 +26,7 @@ class Portfolio():
 
         return self.positions
 
-    def add_positions(self, positions: List[Dict]) -> Dict:
+    def add_positions(self, positions: List[dict]) -> dict:
 
         if isinstance(positions, list):
             for position in positions:

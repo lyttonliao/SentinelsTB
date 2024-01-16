@@ -6,7 +6,7 @@ from datetime import datetime
 from datetime import timezone
 
 from typing import List
-from typing import Dict
+from typing import dict
 from typing import Union
 
 from pandas.core.groupby import DataFrameGroupBy
@@ -14,7 +14,7 @@ from pandas.core.window import RollingGroupby
 
 class StockFrame():
 
-    def __init__(self, data: List[Dict]) -> None:
+    def __init__(self, data: List[dict]) -> None:
 
         self._data = data
         self._frame: pd.DataFrame = self.create_frame()
@@ -66,7 +66,7 @@ class StockFrame():
 
         return price_df
     
-    def add_rows(self, data: Dict) -> None:
+    def add_rows(self, data: dict) -> None:
 
         column_names = ['open', 'close', 'high', 'low', 'volume']
 
@@ -101,5 +101,5 @@ class StockFrame():
     def do_indicators_exist(self, column_names: List[str]) -> bool:
         pass
 
-    def _check_signals(self, indicators: Dict) -> Union[pd.Series, None]:
+    def _check_signals(self, indicators: dict) -> Union[pd.Series, None]:
         pass

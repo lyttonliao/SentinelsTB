@@ -8,7 +8,7 @@ from datetime import time
 from datetime import timezone
 
 from typing import List
-from typing import Dict
+from typing import dict
 from typing import Union
 
 
@@ -23,8 +23,8 @@ class PyRobot():
         self.redirect_uri: str = redirect_uri
         self.credentials_path: str = credentials_path
         self.session: TDClient = self._create_session()
-        self.trades: Dict = {}
-        self.historical_prices: Dict = {}
+        self.trades: dict = {}
+        self.historical_prices: dict = {}
         self.stock_frame = None
 
     def _create_session(self) -> TDClient:
@@ -83,10 +83,10 @@ class PyRobot():
     def create_trade(self):
         pass
 
-    def grab_current_quotes(self) -> Dict:
+    def grab_current_quotes(self) -> dict:
         pass
 
-    def grab_historical_prices(self) -> List[Dict]:
+    def grab_historical_prices(self) -> List[dict]:
         pass
 
     def create_stock_frame(self):
